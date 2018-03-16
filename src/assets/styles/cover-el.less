@@ -1,0 +1,46 @@
+@import './_variables.less';
+
+.el-picker-panel .el-time-panel__content * {
+  box-sizing: content-box;
+}
+.el-dialog {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  .el-dialog__header {
+    padding: 10px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: @color-primary;
+    .el-dialog__title {
+      color: #ffffff;
+    }
+  }
+}
+
+.filter {
+  .el-select {
+    .el-select__tags {
+      width: 100%;
+      height: 100% !important;
+      overflow: hidden;
+      & > span {
+        position: absolute;
+        top: 3px;
+        display: inline-block;
+        width: 360px;
+      }
+    }
+    .el-input__icon + .el-input__inner {
+      height: 36px !important;
+    }
+  }
+}
+.el-transfer * {
+  box-sizing: content-box;
+}
+
+.el-autocomplete-suggestion__wrap {
+  overflow: scroll !important;
+}
+
+

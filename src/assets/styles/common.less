@@ -1,0 +1,362 @@
+@import './_variables.less';
+@import './reset.css';
+@import './cover-el.less';
+
+/* 清理浮动 */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+/* 设置内联, 减少浮动带来的bug */
+.pull-left,
+.pull-right {
+  display: inline;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+// bootstrap 提取出的 media
+.media,
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.media-body {
+  width: 10000px;
+}
+.media-object {
+  display: block;
+}
+.media-right,
+.media > .pull-right {
+  padding-left: 10px;
+}
+.media-left,
+.media > .pull-left {
+  padding-right: 10px;
+}
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+.media-middle {
+  vertical-align: middle;
+}
+.media-bottom {
+  vertical-align: bottom;
+}
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 两行文字溢出时出现省略号，需设定宽度 */
+.ellipsis-two {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.vertical-top {
+  vertical-align: top;
+}
+.vertical-middle {
+  vertical-align: middle;
+}
+.vertical-bottom {
+  vertical-align: bottom;
+}
+.ir {
+  overflow: hidden;
+  *text-indent: -999em;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.mr15 {
+  margin-right: 15px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr30 {
+  margin-right: 30px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.pr30 {
+  padding-right: 30px;
+}
+
+// 常用字体大小
+.font20 {
+  font-size: 20px;
+}
+.font18 {
+  font-size: 18px;
+}
+.font16 {
+  font-size: 16px;
+}
+.font14 {
+  font-size: 14px;
+}
+.font12 {
+  font-size: 12px;
+}
+// 字体加粗细
+.fw-bold {
+  font-weight: bold;
+}
+.fw-normal {
+  font-weight: normal;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: @color-font;
+  background: @color-bg;
+}
+
+a {
+  color: @color-font;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input {
+  outline: 0;
+}
+.container-in {
+  margin: 10px 20px;
+  padding:15px 20px;
+  background-color: #ffffff;
+}
+.max-8em {
+  max-width: 8em;
+}
+.icon-wechat {
+  color: #70ca43;
+}
+.icon-weibo {
+  color: #f13c19;
+}
+.icon-jinritoutiao {
+  color: #f13c19;
+}
+.icon-arrow-detail {
+  color: #2786bc;
+}
+.icon-renzheng {
+  color: #f16513;
+}
+.icon-yuanchuang {
+  color: #89dab5;
+}
+.icon-msg {
+  color: #3bbded;
+}
+/* filter */
+.filter {
+  padding: 10px 15px;
+  background: #fff;
+  .item {
+    width: 178px;
+    margin: 5px 6px;
+  }
+  .btn {
+    margin: 5px 0 0 6px;
+    vertical-align: top;
+  }
+  &.no-border {
+    border: 0;
+  }
+}
+
+.tips, .tips-red {
+  background-color: #d9edf7;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid lighten(@color-primary, 15%);
+  .item {
+    margin: 5px;
+    font-size: 14px;
+  }
+  &.danger {
+    background-image: linear-gradient(to bottom, #f2dede 0%, #e7c3c3 100%);
+    border-color: #dca7a7;
+  }
+}
+.tips {
+  background-color: #d9edf7;
+  border: 1px solid lighten(@color-primary, 15%);
+}
+.tips-red {
+  background-color: #ffe1e1;
+  border: 1px solid lighten(#f00, 15%);
+}
+
+.link {
+  color: #0084d7;
+  &:hover {
+    color: #0088cc;
+  }
+}
+
+.data-list {
+  width: 100%;
+  thead {
+    background-color: @color-thead;
+    th {
+      padding: 10px 5px;
+      font-weight: bold;
+    }
+  }
+  tbody td {
+    padding: 20px 5px;
+    vertical-align: middle;
+    border-top: 1px solid @color-border;
+  }
+}
+
+/* 客服 买家 媒介 卖家 信息 弹窗 */
+ul.info-list {
+  width: 275px;
+  margin: 0 auto 20px auto;
+  li {
+    border-bottom: 1px solid @color-border;
+    padding: 8px 0;
+    .title {
+      color: #999999;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 0 6px;
+    }
+  }
+}
+/* 强制换行 */
+.break-force {
+  white-space: normal !important;
+  word-break:break-all !important;
+  word-wrap:break-word !important;
+}
+.el-table .cell {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: auto;
+}
+/* 有详情的 换行显示 比如 客服信息 */
+// .with-detail {
+//   display: block;
+// }
+// .with-detail-btn {
+//   padding: 0;
+// }
+/* 英文自动换行 */
+.word-wrap {
+  word-break: break-all
+}
+
+/* 调整字体 大小 */
+.data-list thead th {
+  font-size: 14px;
+}
+.data-list tbody td {
+  font-size: 14px;
+}
+// 表单 太宽了
+.form .el-form-item__content {
+  max-width: 800px;
+}
